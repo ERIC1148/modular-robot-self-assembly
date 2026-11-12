@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the original paper it reproduces."
+title: "modular-robot-self-assembly: a MuJoCo reproduction of SMORES-EP parallel self-assembly"
+authors:
+  - family-names: Chen
+    given-names: Yuge
+references:
+  - type: article
+    title: "SMORES-EP, a modular robot with parallel self-assembly"
+    authors:
+      - family-names: Liu
+        given-names: Chao
+      - family-names: Lin
+        given-names: Qian
+      - family-names: Kim
+        given-names: Hyun
+      - family-names: Yim
+        given-names: Mark
+    journal: "Autonomous Robots"
+    volume: 47
+    start: 211
+    end: 228
+    year: 2023
+    doi: "10.1007/s10514-022-10078-1"

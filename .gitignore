@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+MUJOCO_LOG.TXT
+.DS_Store
+.claude/
+# papers and personal notes live outside the repository
+*.pdf
+*.docx
+*.pptx

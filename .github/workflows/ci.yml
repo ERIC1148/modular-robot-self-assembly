@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install mujoco numpy scipy
+      - name: Planner self-checks against the paper's data
+        run: |
+          python -m planner.faces
+          python -m planner.topology
+          python -m planner.unfold
+          python -m planner.assignment
+          python -m planner.scheduler
+          python -m planner.routing
+      - name: Simulation interface tests
+        run: |
+          python -m tests.test_bridge
+          python -m tests.test_wrist
+      - name: End-to-end assembly (headless)
+        run: |
+          python -m sim_mujoco.runner_full --headless --task task2
+          python -m sim_mujoco.runner_full --headless --task ten

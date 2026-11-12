@@ -1,0 +1,6 @@
+mujoco>=3.2
+numpy>=1.26
+scipy>=1.11
+# optional: video recording (sim_mujoco.record) and path plots (sim_mujoco.experiments plot)
+imageio[ffmpeg]>=2.34
+matplotlib>=3.8
