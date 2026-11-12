@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install "mujoco>=3.2,<4" numpy scipy
+      - run: pip install mujoco numpy scipy
       - name: Planner self-checks against the paper's data
         run: |
           python -m planner.faces

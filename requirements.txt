@@ -1,4 +1,4 @@
-mujoco>=3.2,<4   # MuJoCo 4 changed the weld equality data layout; not yet supported
+mujoco>=3.2
 numpy>=1.26
 scipy>=1.11
 # optional: video recording (sim_mujoco.record) and path plots (sim_mujoco.experiments plot)

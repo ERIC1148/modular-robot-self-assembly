@@ -219,8 +219,9 @@ class MuJoCoBridge:
             # 与它既有的 weld 打架，装配体被拽变形（实测残差从 0.2mm 恶化到 11mm）。
             self._snap(mj, mi, mate_relpose(fj, fi))
 
-        # eq_data 布局 (mjNEQDATA=11): anchor(3) | relpose_pos(3) | relpose_quat(4) | torquescale(1)
-        d = np.zeros(11)
+        # eq_data 布局: anchor(3) | relpose_pos(3) | relpose_quat(4) | torquescale(1)
+        # 长度取自模型（mjNEQDATA 在 MuJoCo 3.12 是 11，较新版本是 12，前 11 位布局不变）
+        d = np.zeros(self.model.eq_data.shape[1])
         d[0:3] = 0.0  # anchor 取 body2 原点
         d[3:6] = [rx, ry, 0.0]
         d[6:10] = rq
