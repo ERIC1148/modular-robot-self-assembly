@@ -76,7 +76,7 @@ The paper's robots fold from the planar pattern into a 3D shape. TILT and PAN jo
 Each task was run from one set of initial poses, in an ideal world: no sensing noise, no communication delay, no wheel slip model beyond Coulomb friction. Nothing here is a statistical result, and nothing has been tried on hardware.
 
 **8. Many numbers are mine, not the paper's.**
-Wheel geometry, friction, weld stiffness, actuator force limits and all controller gains except K = diag(2, 1) were chosen to make the simulation behave. A line-by-line account of what comes from the paper and what does not is in [`docs/attribution.zh.md`](docs/attribution.zh.md) (in Chinese).
+Wheel geometry, friction, weld stiffness, actuator force limits and all controller gains except K = diag(2, 1) were chosen to make the simulation behave.
 
 ## Future work
 
@@ -99,7 +99,6 @@ planner/      engine-independent planning and control
 sim_mujoco/   model generation, simulator bridge, docking state machine, runners, experiments
 tests/        headless checks of the simulation interface and wrist joints
 examples/     a minimal MuJoCo example
-docs/         working notes (in Chinese): attribution, verification, simulation pitfalls, ablation
 media/        demo videos, GIFs and a path figure
 ```
 

@@ -5,6 +5,7 @@ __pycache__/
 MUJOCO_LOG.TXT
 .DS_Store
 .claude/
+docs/
 # papers and personal notes live outside the repository
 *.pdf
 *.docx
