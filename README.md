@@ -34,7 +34,7 @@ The planning steps are checked against the paper's own data: the root module, th
 
 ## Quick start
 
-Requires Python 3.12 or newer.
+Requires Python 3.12 or newer and MuJoCo 3.x (tested with 3.12). MuJoCo 4 changed the layout of weld constraint data and is not supported yet.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
